@@ -154,7 +154,7 @@ module Dentaku
           search = @search.value(context)
           search = search.to_s unless search.is_a?(Regexp)
           replacement = @replacement.value(context).to_s
-          original.sub(search, replacement)
+          original.gsub(search, replacement)
         end
       end
 
